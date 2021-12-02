@@ -9,6 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TextCollectionViewController" customModule="LearningCollectionViewApp" customModuleProvider="target">
             <connections>
+                <outlet property="collectionLayout" destination="Yz4-zx-nfB" id="BWp-KG-e60"/>
                 <outlet property="collectionView" destination="bdt-gr-ggf" id="q4g-88-F8k"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>

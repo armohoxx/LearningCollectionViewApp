@@ -15,8 +15,11 @@ class TextCollectionViewController: UIViewController, TextCollectionViewProtocol
 	var presenter: TextCollectionPresenterProtocol?
     
     @IBOutlet weak var collectionView: UICollectionView!
-    
-    let layout = UICollectionViewFlowLayout()
+    @IBOutlet weak var collectionLayout: UICollectionViewFlowLayout! {
+        didSet {
+            collectionLayout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
+        }
+    }
     
 	override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,11 +27,17 @@ class TextCollectionViewController: UIViewController, TextCollectionViewProtocol
         title = "Text"
         navigationController?.navigationBar.backgroundColor = .secondarySystemBackground
         
-        layout.itemSize = CGSize(width: 200, height: 200)
-        collectionView.collectionViewLayout = layout
         collectionView.register(TextCollectionViewCell.nib(), forCellWithReuseIdentifier: TextCollectionViewCell.identifier)
         collectionView.delegate = self
         collectionView.dataSource = self
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+    
+        //ตรวจสอบ layout เมื่อมีการหมุน
+        collectionView.collectionViewLayout.invalidateLayout()
+        collectionView.reloadData()
     }
 
 }
@@ -37,22 +46,25 @@ extension TextCollectionViewController: UICollectionViewDelegate {
     
 }
 
-extension TextCollectionViewController: UICollectionViewDataSource {
+extension TextCollectionViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return text.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TextCollectionViewCell.identifier, for: indexPath) as! TextCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.reuseID, for: indexPath) as! TextCollectionViewCell
         
         cell.configure(with: text[indexPath.row])
+        
+        //set value to maxWidth
+        cell.maxWidth = collectionView.bounds.width - Constants.spacing
         
         return cell
     }
 }
 
-extension TextCollectionViewController: UICollectionViewDelegateFlowLayout {
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 375, height: 50)
-    }
+private enum Constants {
+    static let spacing: CGFloat = 20
+    static let borderWidth: CGFloat = 0
+    static let reuseID = "TextCollectionViewCell"
 }

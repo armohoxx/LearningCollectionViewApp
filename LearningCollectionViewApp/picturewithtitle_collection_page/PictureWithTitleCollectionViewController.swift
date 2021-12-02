@@ -67,17 +67,12 @@ extension PictureWithTitleCollectionViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         collectionView.deselectItem(at: indexPath, animated: true)
         
-        let idItemPicture = picture[indexPath.item].images_id
-        let nameItemPicture = picture[indexPath.item].images_name
-        let fullimagePicture = picture[indexPath.item].fullimage
-        let thumbimagePicture = picture[indexPath.item].thumbimage
-        
-        let idItemSearch = searchingMap[indexPath.item].images_id
-        let nameItemSearch = searchingMap[indexPath.item].images_name
-        let fullimageSearch = searchingMap[indexPath.item].fullimage
-        let thumbimageSearch = searchingMap[indexPath.item].thumbimage
-        
         if searching {
+            let idItemSearch = searchingMap[indexPath.item].images_id
+            let nameItemSearch = searchingMap[indexPath.item].images_name
+            let fullimageSearch = searchingMap[indexPath.item].fullimage
+            let thumbimageSearch = searchingMap[indexPath.item].thumbimage
+            
             let dataSearch = DataPicture.init(images_id: idItemSearch,
                                            images_name: nameItemSearch,
                                            fullimage: fullimageSearch,
@@ -85,6 +80,11 @@ extension PictureWithTitleCollectionViewController: UICollectionViewDelegate {
             
             self.presenter?.notifyViewMapDetail(dataDetail: dataSearch)
         } else {
+            let idItemPicture = picture[indexPath.item].images_id
+            let nameItemPicture = picture[indexPath.item].images_name
+            let fullimagePicture = picture[indexPath.item].fullimage
+            let thumbimagePicture = picture[indexPath.item].thumbimage
+            
             let dataPicture = DataPicture.init(images_id: idItemPicture,
                                            images_name: nameItemPicture,
                                            fullimage: fullimagePicture,

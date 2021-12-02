@@ -16,8 +16,11 @@
                 <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fC1-bW-Hkh">
-                        <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Text" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fC1-bW-Hkh">
+                        <rect key="frame" x="0.0" y="0.0" width="0.0" height="150"/>
+                        <constraints>
+                            <constraint firstAttribute="width" id="T8V-lT-dKi"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -26,14 +29,15 @@
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
+                <constraint firstAttribute="bottom" secondItem="fC1-bW-Hkh" secondAttribute="bottom" id="Ltg-94-TEI"/>
                 <constraint firstAttribute="trailing" secondItem="fC1-bW-Hkh" secondAttribute="trailing" id="PHa-an-mPA"/>
-                <constraint firstAttribute="bottom" secondItem="fC1-bW-Hkh" secondAttribute="bottom" id="YiY-uI-eAw"/>
                 <constraint firstItem="fC1-bW-Hkh" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="ds5-jb-nQY"/>
                 <constraint firstItem="fC1-bW-Hkh" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="gBL-wV-gXv"/>
             </constraints>
             <size key="customSize" width="150" height="150"/>
             <connections>
                 <outlet property="labelTextView" destination="fC1-bW-Hkh" id="Mp0-My-u0q"/>
+                <outlet property="maxWidthConstraint" destination="T8V-lT-dKi" id="ZpC-B4-f83"/>
             </connections>
             <point key="canvasLocation" x="204.34782608695653" y="108.48214285714285"/>
         </collectionViewCell>
