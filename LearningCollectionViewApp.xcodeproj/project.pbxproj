@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4119B1D127578AD20042AD0B /* NetworkAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4119B1D027578AD20042AD0B /* NetworkAdapter.swift */; };
 		41254E7F27436F3A00F0BBA1 /* SplashPagePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41254E7927436F3A00F0BBA1 /* SplashPagePresenter.swift */; };
 		41254E8027436F3A00F0BBA1 /* SplashPageRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41254E7A27436F3A00F0BBA1 /* SplashPageRouter.swift */; };
 		41254E8127436F3A00F0BBA1 /* SplashPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41254E7B27436F3A00F0BBA1 /* SplashPageViewController.swift */; };
@@ -30,7 +31,6 @@
 		41670743274F8C1F00456E0F /* MapDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41670741274F8C1F00456E0F /* MapDetailTableViewCell.swift */; };
 		41670744274F8C1F00456E0F /* MapDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41670742274F8C1F00456E0F /* MapDetailTableViewCell.xib */; };
 		4189266827550911003A07C6 /* MapDetailPageEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4189266727550911003A07C6 /* MapDetailPageEntity.swift */; };
-		4191F2C42746553D00002921 /* NetworkAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4191F2C32746553D00002921 /* NetworkAdapter.swift */; };
 		41B5CDF1273E6E4100687E83 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B5CDF0273E6E4100687E83 /* AppDelegate.swift */; };
 		41B5CDF3273E6E4100687E83 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B5CDF2273E6E4100687E83 /* SceneDelegate.swift */; };
 		41B5CDF5273E6E4100687E83 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B5CDF4273E6E4100687E83 /* ViewController.swift */; };
@@ -61,6 +61,7 @@
 
 /* Begin PBXFileReference section */
 		18EF5FC722E90E81C7BC9DF7 /* Pods_LearningCollectionViewApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LearningCollectionViewApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4119B1D027578AD20042AD0B /* NetworkAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkAdapter.swift; sourceTree = "<group>"; };
 		41254E7927436F3A00F0BBA1 /* SplashPagePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashPagePresenter.swift; sourceTree = "<group>"; };
 		41254E7A27436F3A00F0BBA1 /* SplashPageRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashPageRouter.swift; sourceTree = "<group>"; };
 		41254E7B27436F3A00F0BBA1 /* SplashPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashPageViewController.swift; sourceTree = "<group>"; };
@@ -84,7 +85,6 @@
 		41670741274F8C1F00456E0F /* MapDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapDetailTableViewCell.swift; sourceTree = "<group>"; };
 		41670742274F8C1F00456E0F /* MapDetailTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MapDetailTableViewCell.xib; sourceTree = "<group>"; };
 		4189266727550911003A07C6 /* MapDetailPageEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapDetailPageEntity.swift; sourceTree = "<group>"; };
-		4191F2C32746553D00002921 /* NetworkAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetworkAdapter.swift; path = ../../../../../Downloads/NetworkAdapter.swift; sourceTree = "<group>"; };
 		41B5CDED273E6E4100687E83 /* LearningCollectionViewApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LearningCollectionViewApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		41B5CDF0273E6E4100687E83 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		41B5CDF2273E6E4100687E83 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -168,7 +168,7 @@
 		4191F2C22746551000002921 /* network */ = {
 			isa = PBXGroup;
 			children = (
-				4191F2C32746553D00002921 /* NetworkAdapter.swift */,
+				4119B1D027578AD20042AD0B /* NetworkAdapter.swift */,
 			);
 			path = network;
 			sourceTree = "<group>";
@@ -447,6 +447,7 @@
 				41B5CE0D273E711500687E83 /* PictureCollectionViewController.swift in Sources */,
 				41B5CE0B273E711500687E83 /* PictureCollectionPresenter.swift in Sources */,
 				41B5CE1A273E717C00687E83 /* TextCollectionRouter.swift in Sources */,
+				4119B1D127578AD20042AD0B /* NetworkAdapter.swift in Sources */,
 				41B5CE26273E71A800687E83 /* PictureWithTitleCollectionRouter.swift in Sources */,
 				41670743274F8C1F00456E0F /* MapDetailTableViewCell.swift in Sources */,
 				41B5CE19273E717C00687E83 /* TextCollectionPresenter.swift in Sources */,
@@ -462,7 +463,6 @@
 				41B5CE1C273E717C00687E83 /* TextCollectionProtocols.swift in Sources */,
 				41254E8927438A5D00F0BBA1 /* PictureCollectionViewCell.swift in Sources */,
 				41B5CE27273E71A800687E83 /* PictureWithTitleCollectionViewController.swift in Sources */,
-				4191F2C42746553D00002921 /* NetworkAdapter.swift in Sources */,
 				4167073C274F818000456E0F /* MapDetailPageViewController.swift in Sources */,
 				41B5CE0E273E711500687E83 /* PictureCollectionProtocols.swift in Sources */,
 				41254E932743B9D400F0BBA1 /* TextCollectionViewCell.swift in Sources */,

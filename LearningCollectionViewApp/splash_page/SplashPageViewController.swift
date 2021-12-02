@@ -22,10 +22,9 @@ class SplashPageViewController: UIViewController, SplashPageViewProtocol {
         //กำหนดคุณลักษณะให้กับ splashPage
         let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
         backgroundImage.image = UIImage(named: "background3")
-        
         backgroundImage.contentMode = .scaleAspectFill
-        self.view.insertSubview(backgroundImage, at: 0)
         
+        self.view.insertSubview(backgroundImage, at: 0)
         self.showLoader()
         self.showTabBarAndPage()
         
